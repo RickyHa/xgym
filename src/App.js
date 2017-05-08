@@ -6,7 +6,8 @@ import {Dashboard} from './dashboard';
 import translations from './i18n';
 import {BranchList, BranchEdit, BranchCreate} from './branchs';
 import {RoomList} from './rooms';
-
+import {RoomStatusList, RoomStatusEdit} from './roomStatus';
+import Menu from './Menu';
 import restClient from './restClient';
 import fakeRestServer from './restServer';
 
@@ -28,6 +29,7 @@ class App extends Component {
         dashboard={Dashboard}
         messages={translations}
         locale="vi"
+        menu={Menu}
         >
         <Resource
           name="branchs"
@@ -35,6 +37,13 @@ class App extends Component {
           edit={BranchEdit}
           create={BranchCreate}
           remove={Delete}
+          >
+        </Resource>
+        <Resource
+          name="rooms_status"
+          list={RoomStatusList}
+          edit={RoomStatusEdit}
+          messages={translations}
           >
         </Resource>
         <Resource

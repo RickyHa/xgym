@@ -9,6 +9,7 @@ export default {
   dashboard_monthlyRevenue_subtitle: "Monthly Revenue",
   global_search: "Search",
   global_note: "Note",
+  global_status: "Status",
   room_name:"Room",
   room_acreage:"Acreage"
 } // export

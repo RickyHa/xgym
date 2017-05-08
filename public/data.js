@@ -36876,7 +36876,7 @@ data = {
      "id":1,
      "name":"Chi nhánh 1",
      "address":"Trần Hưng Đạo",
-     "phone": 0123456789,
+     "phone": 123456789,
      "fax": "fax xxx",
      "deputy": "Trần Hoàng Nhả",
      "note": "Coara is heita kofpirev erehota mim fidih najifcig lawul booh lef jogid ko jepenujiw ruvew nutmi. Nanapo tugtev narura linevif go ormoj ozo udbera fuwoc juwit mif avduzor mebenas odebozoh. Gil ti za te tonutlif igikowij omnep uke tew moov reorlit hu pinte zalbalvun eja eje vepoho. Coara is heita kofpirev erehota mim fidih najifcig lawul booh lef jogid ko jepenujiw ruvew nutmi. Nanapo tugtev narura linevif go ormoj ozo udbera fuwoc juwit mif avduzor mebenas odebozoh. Gil ti za te tonutlif igikowij omnep uke tew moov reorlit hu pinte zalbalvun eja eje vepoho.",
@@ -36886,7 +36886,7 @@ data = {
      "id":2,
      "name":"Chi nhánh 2",
      "address":"Trần Hưng Đạo",
-     "phone": 0123456789,
+     "phone": 123456789,
      "fax": "fax xxx",
      "deputy": "Trần Hoàng Nhả",
      "note": "note 1",
@@ -36929,8 +36929,24 @@ data = {
      "id":1,
      "name":"phòng yoga 1",
      "branch_id":1,
+     "status_id":"1",
      "acreage":20,
      "note":"ghi chú"
+   }
+ ],
+
+ "rooms_status":[
+   {
+     "id":"1",
+     "name":"Đang trống"
+   },
+   {
+     "id":"2",
+     "name":"Đã sử dụng"
+   },
+   {
+     "id":"3",
+     "name":"Không sử dụng"
    }
  ]
 

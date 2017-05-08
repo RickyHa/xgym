@@ -1,5 +1,4 @@
 import React from 'react';
-import {translate} from 'admin-on-rest';
 import {List, Responsive, SimpleList, TextField, NumberField, Edit, Create, Filter, TextInput, Datagrid, ReferenceField, EditButton} from 'admin-on-rest/lib/mui';
 
 export const RoomFilter=(props) => (
@@ -21,7 +20,11 @@ export const RoomList=(props) => (
         <Datagrid>
           <TextField source='id'/>
           <TextField label="room_name" source='name'/>
-          <ReferenceField label="branch" source="id" reference="branchs">
+          <ReferenceField label="branch" source="branch_id" reference="branchs">
+            <TextField source="name"/>
+          </ReferenceField>
+          <TextField label="room_name" source='name'/>
+          <ReferenceField label="global_status" source="status_id" reference="rooms_status">
             <TextField source="name"/>
           </ReferenceField>
           <NumberField label="room_acreage" source="acreage" />

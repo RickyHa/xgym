@@ -9,6 +9,7 @@ export default {
   dashboard_monthlyRevenue_subtitle: "Doanh thu hàng tháng",
   global_note: "Ghi chú",
   global_search: "Tìm kiếm",
+  global_status: "Trạng thái",
   room_name:"Tên phòng",
   room_acreage:"Diện tích phòng"
 } // export

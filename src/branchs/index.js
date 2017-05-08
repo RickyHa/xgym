@@ -35,7 +35,7 @@ export const BranchList=(props) => (
   </List>
 ); // export
 
-const BranchTitle=translate( ({record, translate}) => <span>{record.name}</span>);
+const BranchTitle=translate(({record, translate}) => <span>{record.name}</span>);
 
 export const BranchEdit=(props) => (
     <Edit title={<BranchTitle/>} {...props} >
