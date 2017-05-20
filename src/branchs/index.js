@@ -1,10 +1,14 @@
 import React from 'react';
 import {translate} from 'admin-on-rest';
-import { List, Responsive, SimpleList, Datagrid, TextField, Edit, Create, TextInput, SimpleForm, EditButton, LongTextInput, Filter, NumberField, NumberInput } from 'admin-on-rest/lib/mui';
+import { List, Responsive, SimpleList, Datagrid, TextField, Edit, Create, TextInput, SimpleForm, EditButton, LongTextInput, Filter, NumberField, NumberInput, required } from 'admin-on-rest/lib/mui';
+
+import Icon from 'material-ui/svg-icons/social/location-city';
+
+export const BranchsIcon = Icon;
 
 export const BranchFilter=(props) => (
     <Filter {...props}>
-        <TextInput label="global_search" source="q" alwaysOn />
+        <TextInput label="pos.search" source="q" alwaysOn />
     </Filter>
 ); // BranchFilter
 
@@ -21,13 +25,13 @@ export const BranchList=(props) => (
       medium={
         <Datagrid>
           <TextField source="id"/>
-          <TextField source="name" label="branchs_name"/>
-          <TextField source="address" label="branchs_address"/>
-          <TextField source="phone" label="branchs_phone"/>
-          <TextField source="fax" label="branchs_fax"/>
-          <TextField source="deputy" label="branchs_deputy"/>
-          <NumberField source="income" label="branchs_income"/>
-          <TextField source="note" label="global_note" style={{maxWidth: '20em', whiteSpace: 'nowrap'}}/>
+          <TextField source="name"/>
+          <TextField source="address"/>
+          <TextField source="phone"/>
+          <TextField source="fax"/>
+          <TextField source="deputy"/>
+          <NumberField source="income"/>
+          <TextField source="note" style={{maxWidth: '20em', whiteSpace: 'nowrap'}}/>
           <EditButton/>
         </Datagrid>
       } // medium
@@ -40,7 +44,7 @@ const BranchTitle=translate(({record, translate}) => <span>{record.name}</span>)
 export const BranchEdit=(props) => (
     <Edit title={<BranchTitle/>} {...props} >
         <SimpleForm>
-            <TextInput source="name" />
+            <TextInput source="name" validate={required}/>
             <TextInput source="address" />
             <TextInput source="phone" />
             <TextInput source="fax" />
@@ -54,7 +58,7 @@ export const BranchEdit=(props) => (
 export const BranchCreate=(props) => (
     <Create {...props}>
         <SimpleForm>
-          <TextInput source="name" />
+          <TextInput source="name" validate={required}/>
           <TextInput source="address" />
           <TextInput source="phone" />
           <TextInput source="fax" />

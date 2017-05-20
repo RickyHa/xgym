@@ -36935,19 +36935,56 @@ data = {
    }
  ],
 
- "rooms_status":[
+ "members":[
    {
      "id":"1",
-     "name":"Đang trống"
+     "name":"Nhả Trần",
+     "birthday": "2017-02-11T03:55:27.492Z",
+     "phone": 0123456789,
+     "source_id":"1"
    },
    {
      "id":"2",
-     "name":"Đã sử dụng"
+     "name":"Lộc Nguyễn",
+     "birthday": "2017-02-11T03:55:27.492Z",
+     "phone": 0123456789,
+     "source_id":"2"
    },
    {
      "id":"3",
-     "name":"Không sử dụng"
+     "name":"Toàn mèo",
+     "birthday": "2017-02-11T03:55:27.492Z",
+     "phone": 0123456789,
+     "source_id":"1"
    }
+ ],
+ "sessions":[
+   {
+     "id":"1",
+     "name":"ChaChaCha",
+     "branch_id":1,
+     "room_id":1,
+     "note":"kaka note note",
+     "monday":true,
+     "tuesday":true,
+     "wednesday":true,
+     "thursday":true,
+     "friday":true,
+     "saturday":true,
+     "sunday":false,
+
+   }
+ ],
+ "packages":[
+   {
+     "id":"1",
+     "name":"Yoga 2 tháng",
+     "branch_id":1,
+     "form_id":"1",
+     "number":2,
+     "amount":800000,
+     "note":"ghi chú",
+  }
  ]
 
 }

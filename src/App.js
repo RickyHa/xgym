@@ -3,13 +3,17 @@ import './App.css';
 
 import {Admin, Delete, Resource} from 'admin-on-rest';
 import {Dashboard} from './dashboard';
-import translations from './i18n';
 import {BranchList, BranchEdit, BranchCreate} from './branchs';
-import {RoomList} from './rooms';
-import {RoomStatusList, RoomStatusEdit} from './roomStatus';
+import {MembersList, MembersEdit, MembersCreate} from './members';
+import {PackageList, PackageEdit, PackageCreate} from './packages';
+import {RoomList, RoomEdit, RoomCreate} from './rooms';
+import {SessionsList, SessionsEdit, SessionsCreate} from './sessions';
+import authClient from './authClient';
+import customRoutes from './routes';
+import fakeRestServer from './restServer';
 import Menu from './Menu';
 import restClient from './restClient';
-import fakeRestServer from './restServer';
+import translations from './i18n';
 
 class App extends Component {
 
@@ -24,12 +28,14 @@ class App extends Component {
   render() {
     return (
       <Admin
-        title="XGYM"
-        restClient={restClient}
+        authClient={authClient}
+        customRoutes={customRoutes}
         dashboard={Dashboard}
-        messages={translations}
         locale="vi"
+        messages={translations}
         menu={Menu}
+        restClient={restClient}
+        title="XGYM"
         >
         <Resource
           name="branchs"
@@ -37,24 +43,20 @@ class App extends Component {
           edit={BranchEdit}
           create={BranchCreate}
           remove={Delete}
-          >
-        </Resource>
-        <Resource
-          name="rooms_status"
-          list={RoomStatusList}
-          edit={RoomStatusEdit}
-          messages={translations}
-          >
-        </Resource>
+          />
         <Resource
           name="rooms"
           list={RoomList}
-          messages={translations}
-          >
-        </Resource>
+          edit={RoomEdit}
+          create={RoomCreate}
+          remove={Delete}
+          />
+        <Resource name="members" list={MembersList} edit={MembersEdit} create={MembersCreate} remove={Delete}/>
+        <Resource name="sessions" list={SessionsList} edit={SessionsEdit} create={SessionsCreate} remove={Delete}/>
+        <Resource name="packages" list={PackageList} edit={PackageEdit} create={PackageCreate} remove={Delete}/>
       </Admin>
     );
-  }
-}
+  } // render()
+} // App
 
 export default App;

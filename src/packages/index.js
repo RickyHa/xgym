@@ -3,42 +3,41 @@ import {List, Responsive, SimpleList, TextField, NumberField, NumberInput, LongT
   , Filter, TextInput, Datagrid, ReferenceField, ReferenceInput, EditButton, SelectInput, SimpleForm, choices, SelectField
   , required
 } from 'admin-on-rest/lib/mui';
-import Icon from 'material-ui/svg-icons/social/domain';
+import Icon from 'material-ui/svg-icons/editor/monetization-on';
 
-export const RoomsIcon = Icon;
+export const PackagesIcon = Icon;
 
-export const RoomFilter=(props) => (
+export const PackageFilter=(props) => (
   <Filter {...props}>
     <TextInput label="pos.search" source="q" alwaysOn/>
   </Filter>
 ); // RoomFilter
 
-export const RoomList=(props) => (
-  <List {...props} filters={<RoomFilter/>}>
+export const PackageList=(props) => (
+  <List {...props} filters={<PackageFilter/>}>
     <Responsive
       small={
         <SimpleList
           primaryText={record => record.name}
-          secondaryText={record => record.acreage}
+          secondaryText={record => record.amount}
           />
       } // small
       medium={
         <Datagrid>
           <TextField source='id'/>
           <TextField source='name'/>
-          <ReferenceField label="branchs_title" source="branch_id" reference="branchs">
+          <ReferenceField source="branch_id" reference="branchs">
             <TextField source="name"/>
           </ReferenceField>
           <SelectField
-            label="global_status"
-            source="status_id"
+            source="form_id"
             choices={[
-              {id:'1', name:'resources.rooms.fields.empty'},
-              {id:'2', name:'resources.rooms.fields.rooms_used'},
-              {id:'3', name:'resources.rooms.fields.rooms_unused'}
+              {id:'1', name:'resources.packages.fields.form_month'},
+              {id:'2', name:'resources.packages.fields.form_session'},
             ]}
             />
-          <NumberField source="acreage" />
+          <NumberField source="number" />
+          <NumberField source="amount" />
           <TextField source="note" style={{maxWidth: '50em', whiteSpace: 'nowrap'}}/>
           <EditButton/>
         </Datagrid>
@@ -47,26 +46,24 @@ export const RoomList=(props) => (
   </List>
 ); // RoomList
 
-export const RoomTitle=({record}) => <span>{record.name}</span> ;
+export const PackageTitle=({record}) => <span>{record.name}</span> ;
 
-export const RoomEdit=(props) => (
-  <Edit {...props} title={<RoomTitle/>}>
+export const PackageEdit=(props) => (
+  <Edit {...props} title={<PackageTitle/>}>
     <SimpleForm >
       <TextInput source="name" validate={required}/>
       <ReferenceInput source="branch_id" reference="branchs" allowEmpty validate={required}>
         <SelectInput source="name"/>
       </ReferenceInput>
       <SelectInput
-        source="status_id"
+        source="form_id"
         choices={[
-          {id:'1', name:'resources.rooms.fields.empty'},
-          {id:'2', name:'resources.rooms.fields.rooms_used'},
-          {id:'3', name:'resources.rooms.fields.rooms_unused'}
+          {id:'1', name:'resources.packages.fields.form_month'},
+          {id:'2', name:'resources.packages.fields.form_session'},
         ]}
-        validation={choices(['m','f'], 'room_status_invalid')}
-        validate={required}
         />
-      <NumberInput source="acreage" validate={required}/>
+      <NumberInput source="number" />
+      <NumberInput source="amount" />
       <LongTextInput source="note"/>
     </SimpleForm>
   </Edit>
@@ -74,7 +71,7 @@ export const RoomEdit=(props) => (
 
 
 
-export const RoomCreate=(props) => (
+export const PackageCreate=(props) => (
   <Create {...props}>
     <SimpleForm >
       <TextInput source="name" validate={required}/>
@@ -82,16 +79,14 @@ export const RoomCreate=(props) => (
         <SelectInput source="name"/>
       </ReferenceInput>
       <SelectInput
-        source="status_id"
+        source="form_id"
         choices={[
-          {id:'1', name:'resources.rooms.fields.empty'},
-          {id:'2', name:'resources.rooms.fields.rooms_used'},
-          {id:'3', name:'resources.rooms.fields.rooms_unused'}
+          {id:'1', name:'resources.packages.fields.form_month'},
+          {id:'2', name:'resources.packages.fields.form_session'},
         ]}
-        validation={choices(['m','f'], 'room_status_invalid')}
-        validate={required}
         />
-      <NumberInput source="acreage" validate={required}/>
+      <NumberInput source="number" />
+      <NumberInput source="amount" />
       <LongTextInput source="note"/>
     </SimpleForm>
   </Create>
