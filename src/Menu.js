@@ -5,6 +5,8 @@ import { translate, DashboardMenuItem } from 'admin-on-rest';
 import { BranchsIcon } from './branchs';
 import { MembersIcon } from './members';
 import { PackagesIcon } from './packages';
+import { PromotionsIcon } from './promotions';
+import { RegistersIcon } from './registers';
 import { RoomsIcon } from './rooms';
 import { SessionsIcon } from './sessions';
 import compose from 'recompose/compose';
@@ -24,6 +26,8 @@ const items=[
   {name: 'branchs', icon: <BranchsIcon/>},
   {name: 'members', icon: <MembersIcon/>},
   {name: 'packages', icon: <PackagesIcon/>},
+  {name: 'promotions', icon: <PromotionsIcon/>},
+  {name: 'registers', icon: <RegistersIcon/>},
   {name: 'rooms', icon: <RoomsIcon/>},
   {name: 'sessions', icon: <SessionsIcon/>},
 ]; // items

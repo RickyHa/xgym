@@ -26,7 +26,7 @@ export const RoomList=(props) => (
         <Datagrid>
           <TextField source='id'/>
           <TextField source='name'/>
-          <ReferenceField label="branchs_title" source="branch_id" reference="branchs">
+          <ReferenceField source="branch_id" reference="branchs">
             <TextField source="name"/>
           </ReferenceField>
           <SelectField

@@ -32,6 +32,10 @@ export default {
         source_individual: "Individual guests",
         source_introduce: "Referrer",
       }, // fields
+      tabs: {
+        info: 'Info',
+        registers: 'Registers'
+      }, // tabs
     }, // members
     packages: {
       name: 'Packages',
@@ -46,6 +50,27 @@ export default {
         note: "Note",
       }, // fields
     }, // packages
+    promotions:{
+      name: 'Promotions',
+      fields: {
+        date_from:'Date from',
+        date_to:'Date to',
+        discount:'Discount (%)',
+        name:'Name',
+        note:'Note',
+      } // fields
+    }, // promotions
+    registers: {
+      name: 'Registers',
+      fields: {
+        amount:'Amount',
+        date_from:'Date from',
+        date_to:'Date to',
+        member_id:"Member",
+        package_id:"Package",
+        promotion_id:"Promotion",
+      }, // fields
+    }, // registers
     rooms: {
       name: 'Rooms',
       fields: {

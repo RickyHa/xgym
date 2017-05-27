@@ -36937,21 +36937,21 @@ data = {
 
  "members":[
    {
-     "id":"1",
+     "id":1,
      "name":"Nhả Trần",
      "birthday": "2017-02-11T03:55:27.492Z",
      "phone": 0123456789,
      "source_id":"1"
    },
    {
-     "id":"2",
+     "id":2,
      "name":"Lộc Nguyễn",
      "birthday": "2017-02-11T03:55:27.492Z",
      "phone": 0123456789,
      "source_id":"2"
    },
    {
-     "id":"3",
+     "id":3,
      "name":"Toàn mèo",
      "birthday": "2017-02-11T03:55:27.492Z",
      "phone": 0123456789,
@@ -36960,7 +36960,7 @@ data = {
  ],
  "sessions":[
    {
-     "id":"1",
+     "id":1,
      "name":"ChaChaCha",
      "branch_id":1,
      "room_id":1,
@@ -36977,7 +36977,7 @@ data = {
  ],
  "packages":[
    {
-     "id":"1",
+     "id":1,
      "name":"Yoga 2 tháng",
      "branch_id":1,
      "form_id":"1",
@@ -36985,6 +36985,27 @@ data = {
      "amount":800000,
      "note":"ghi chú",
   }
- ]
+ ],
+ "promotions":[
+  {
+    "id":1,
+    "name":"Khuyến mãi tháng 2",
+    "discount": 15,
+    "date_from":"2017-02-11T03:55:27.492Z",
+    "date_to":"2017-02-11T03:55:27.492Z",
+    "note":"ghi chú",
+  },
+],
+"registers":[
+  {
+    "id":1,
+    "member_id":1,
+    "package_id":1,
+    "promotion_id":1,
+    "date_from":"2017-02-11T03:55:27.492Z",
+    "date_to":"2017-02-11T03:55:27.492Z",
+    "amount":680000,
+  },
+],
 
 }

@@ -33,6 +33,10 @@ export default {
         source_individual: "Khách lẻ",
         source_introduce: "Người giới thiệu",
       }, // fields
+      tabs: {
+        info: 'Thông tin',
+        registers: 'Danh sách đăng ký'
+      }, // tabs
     }, // members
     packages: {
       name: 'Gói tập',
@@ -47,6 +51,27 @@ export default {
         note: "Ghi chú",
       }, // fields
     }, // packages
+    promotions:{
+      name: 'Khuyến mãi',
+      fields: {
+        date_from:'Từ ngày',
+        date_to:'Đến ngày',
+        discount:'Giảm giá (%)',
+        name:'Tên khuyến mãi',
+        note:'Ghi chú',
+      } // fields
+    }, // promotions
+    registers: {
+      name: 'Đăng ký',
+      fields: {
+        amount: "Số tiền",
+        date_from:'Từ ngày',
+        date_to:'Đến ngày',
+        member_id:"Thành viên",
+        package_id:"Gói tập",
+        promotion_id:"Khuyến mãi",
+      }, // fields
+    }, // registers
     rooms: {
       name: 'Phòng tập',
       fields: {

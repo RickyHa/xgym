@@ -6,6 +6,8 @@ import {Dashboard} from './dashboard';
 import {BranchList, BranchEdit, BranchCreate} from './branchs';
 import {MembersList, MembersEdit, MembersCreate} from './members';
 import {PackageList, PackageEdit, PackageCreate} from './packages';
+import {PromotionsList, PromotionsEdit, PromotionsCreate} from './promotions';
+import {RegistersList, RegistersEdit, RegistersCreate} from './registers';
 import {RoomList, RoomEdit, RoomCreate} from './rooms';
 import {SessionsList, SessionsEdit, SessionsCreate} from './sessions';
 import authClient from './authClient';
@@ -54,6 +56,8 @@ class App extends Component {
         <Resource name="members" list={MembersList} edit={MembersEdit} create={MembersCreate} remove={Delete}/>
         <Resource name="sessions" list={SessionsList} edit={SessionsEdit} create={SessionsCreate} remove={Delete}/>
         <Resource name="packages" list={PackageList} edit={PackageEdit} create={PackageCreate} remove={Delete}/>
+        <Resource name="promotions" list={PromotionsList} edit={PromotionsEdit} create={PromotionsCreate} remove={Delete}/>
+        <Resource name="registers" list={RegistersList} edit={RegistersEdit} create={RegistersCreate} remove={Delete}/>
       </Admin>
     );
   } // render()

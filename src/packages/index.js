@@ -1,6 +1,6 @@
 import React from 'react';
 import {List, Responsive, SimpleList, TextField, NumberField, NumberInput, LongTextInput, Edit, Create
-  , Filter, TextInput, Datagrid, ReferenceField, ReferenceInput, EditButton, SelectInput, SimpleForm, choices, SelectField
+  , Filter, TextInput, Datagrid, ReferenceField, ReferenceInput, EditButton, SelectInput, SimpleForm, SelectField
   , required
 } from 'admin-on-rest/lib/mui';
 import Icon from 'material-ui/svg-icons/editor/monetization-on';
