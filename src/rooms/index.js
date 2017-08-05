@@ -34,8 +34,8 @@ export const RoomList=(props) => (
             source="status_id"
             choices={[
               {id:'1', name:'resources.rooms.fields.empty'},
-              {id:'2', name:'resources.rooms.fields.rooms_used'},
-              {id:'3', name:'resources.rooms.fields.rooms_unused'}
+              {id:'2', name:'resources.rooms.fields.used'},
+              {id:'3', name:'resources.rooms.fields.unused'}
             ]}
             />
           <NumberField source="acreage" />
@@ -60,8 +60,8 @@ export const RoomEdit=(props) => (
         source="status_id"
         choices={[
           {id:'1', name:'resources.rooms.fields.empty'},
-          {id:'2', name:'resources.rooms.fields.rooms_used'},
-          {id:'3', name:'resources.rooms.fields.rooms_unused'}
+          {id:'2', name:'resources.rooms.fields.used'},
+          {id:'3', name:'resources.rooms.fields.unused'}
         ]}
         validation={choices(['m','f'], 'room_status_invalid')}
         validate={required}
@@ -85,8 +85,8 @@ export const RoomCreate=(props) => (
         source="status_id"
         choices={[
           {id:'1', name:'resources.rooms.fields.empty'},
-          {id:'2', name:'resources.rooms.fields.rooms_used'},
-          {id:'3', name:'resources.rooms.fields.rooms_unused'}
+          {id:'2', name:'resources.rooms.fields.used'},
+          {id:'3', name:'resources.rooms.fields.unused'}
         ]}
         validation={choices(['m','f'], 'room_status_invalid')}
         validate={required}

@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { translate, DashboardMenuItem } from 'admin-on-rest';
 import { BranchsIcon } from './branchs';
 import { MembersIcon } from './members';
+import { UsersIcon } from './users';
 import { PackagesIcon } from './packages';
 import { PromotionsIcon } from './promotions';
 import { RegistersIcon } from './registers';
+import { UnregistersIcon } from './unregisters';
 import { RoomsIcon } from './rooms';
 import { SessionsIcon } from './sessions';
 import compose from 'recompose/compose';
@@ -25,9 +27,11 @@ const styles = {
 const items=[
   {name: 'branchs', icon: <BranchsIcon/>},
   {name: 'members', icon: <MembersIcon/>},
+  {name: 'users', icon: <UsersIcon/>},
   {name: 'packages', icon: <PackagesIcon/>},
   {name: 'promotions', icon: <PromotionsIcon/>},
   {name: 'registers', icon: <RegistersIcon/>},
+  {name: 'unregisters', icon: <UnregistersIcon/>},
   {name: 'rooms', icon: <RoomsIcon/>},
   {name: 'sessions', icon: <SessionsIcon/>},
 ]; // items

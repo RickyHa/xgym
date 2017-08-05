@@ -13,7 +13,7 @@ export const BranchFilter=(props) => (
 ); // BranchFilter
 
 export const BranchList=(props) => (
-  <List {...props} perPage={20} filters={<BranchFilter/>}>
+  <List {...props} perPage={2} filters={<BranchFilter/>}>
     <Responsive
       small={
         <SimpleList

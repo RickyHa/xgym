@@ -39,21 +39,22 @@ export const RegistersList=(props) => (
 
 export const RegistersTitle=({record}) => <span>{record.name}</span>;
 // export const Amount = (props) => <DisabledInput source={record => record.amount} {...props} />;
+  var amount;
 export const RegistersEdit=(props) => (
-  <Edit {...props} title={<RegistersTitle/>}>
+<Edit {...props} title={<RegistersTitle/>}>
     <SimpleForm>
       <ReferenceInput source='member_id' reference='members' allowEmpty validate={required}>
         <SelectInput source='name'/>
       </ReferenceInput>
       <ReferenceInput source='package_id' reference='packages' allowEmpty validate={required}>
-        <SelectInput source='name' optionText = {(r) => {console.log(r); r.amount = 10; return r.name;}}/>
+        <SelectInput source='name'/>
       </ReferenceInput>
       <ReferenceInput source='promotion_id' reference='promotions' allowEmpty>
         <SelectInput source='name'/>
       </ReferenceInput>
       <DateInput source='date_from' validate={required}/>
       <DateInput source='date_to' validate={required}/>
-      <DisabledInput source='amount'/>
+      <span>{amount}</span>
     </SimpleForm>
   </Edit>
 ); // RegistersEdit

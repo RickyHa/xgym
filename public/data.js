@@ -36984,6 +36984,15 @@ data = {
      "number":2,
      "amount":800000,
      "note":"ghi chú",
+  },
+  {
+     "id":12,
+     "name":"Gym 1 tháng",
+     "branch_id":1,
+     "form_id":"1",
+     "number":2,
+     "amount":500000,
+     "note":"ghi chú",
   }
  ],
  "promotions":[
@@ -37004,7 +37013,7 @@ data = {
     "promotion_id":1,
     "date_from":"2017-02-11T03:55:27.492Z",
     "date_to":"2017-02-11T03:55:27.492Z",
-    "amount":680000,
+    "amount":680000
   },
 ],
 

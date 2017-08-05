@@ -98,5 +98,24 @@ export default {
         wednesday:"Wednesday",
       }, // fields
     }, // sessions
+    unregisters: {
+      name: 'Unregister',
+      fields: {
+        register_id:"Register ID",
+      }, // fields
+    }, // registers
+    users: {
+      name: 'Users',
+      fields: {
+        birthday: "birthday",
+        date_from: "Date from",
+        date_to: "Date to",
+        name: "Name",
+        note:'Note',
+        password: 'Password',
+        phone: "Phone",
+        username: "User name"
+      }, // fields
+    }, // users
   }, // resources
 }; // export

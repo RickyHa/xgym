@@ -103,5 +103,24 @@ export default {
         wednesday:"Thứ 4",
       }, // fields
     }, // sessions
+    unregisters: {
+      name: 'Hủy Đăng ký',
+      fields: {
+        register_id:"Mã đăng ký",
+      }, // fields
+    }, // registers
+    users: {
+      name: 'Người sử dụng',
+      fields: {
+        birthday: "Sinh nhật",
+        date_from: "Sinh nhật từ",
+        date_to: "Sinh nhật đến",
+        name: "Họ tên",
+        note:'Ghi chú',
+        password: 'Mật khẩu',
+        phone: "Điện thoại",
+        username: "Tên đăng nhập"
+      }, // fields
+    }, // users
   }, // resources
 }; // export
